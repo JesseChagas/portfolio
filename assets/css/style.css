@@ -3617,7 +3617,16 @@ body.c-click .cursor-ring { width: 28px; height: 28px; border-color: rgba(255,25
 /* ════════════════════════════
    MAGNETIC BUTTONS
    ════════════════════════════ */
-.mag-btn { position: relative; will-change: transform; white-space: nowrap; }
+/* will-change aplicado apenas no hover via JS (evita stacking context permanente) */
+.mag-btn { position: relative; white-space: nowrap; }
+.mag-btn:hover { will-change: transform; }
+
+/* ── Correção de overflow do header-button em telas 1200-1400px ──────────── */
+/* Col-lg-3 (~285px) não comporta botão + Ctrl-K chip + lang toggle juntos   */
+@media (max-width: 1400px) {
+  .cmd-trigger-chip        { display: none !important; }
+  .sc-header-btn           { padding: 0 24px !important; font-size: 16px !important; }
+}
 
 /* ════════════════════════════
    COMMAND PALETTE

@@ -768,6 +768,7 @@
     var STRENGTH = 0.38;
     document.querySelectorAll('.mag-btn').forEach(function(btn) {
         btn.addEventListener('mousemove', function(e) {
+            btn.style.willChange = 'transform';          // ativa layer só na hover
             var r   = btn.getBoundingClientRect();
             var dx  = (e.clientX - (r.left + r.width  / 2)) * STRENGTH;
             var dy  = (e.clientY - (r.top  + r.height / 2)) * STRENGTH;
@@ -777,6 +778,8 @@
         btn.addEventListener('mouseleave', function() {
             btn.style.transform  = '';
             btn.style.transition = 'transform 0.55s cubic-bezier(0.34,1.56,0.64,1)';
+            // libera a layer após a animação de spring terminar (~600ms)
+            setTimeout(function() { btn.style.willChange = 'auto'; }, 600);
         });
     });
 
