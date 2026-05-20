@@ -1,13 +1,82 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zxx">
     <head>
 
         <!-- Meta tag -->
         <meta charset="utf-8" />
-        <title>Jessé Chagas - Personal Portfolio</title>
-        <meta name="description" content="" />
+        <title>Jessé Chagas — Full Stack Developer & CS Student at UFCG</title>
+        <meta name="description" content="Portfolio of Jessé Chagas — Full Stack Developer, Data Enthusiast and CS student at UFCG. Building software and solving real problems since 2022." />
+        <meta name="keywords" content="Jessé Chagas, Full Stack Developer, UFCG, Java, Spring Boot, Python, PHP, portfolio" />
+        <meta name="author" content="Jessé Chagas" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Open Graph / LinkedIn / WhatsApp -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Jessé Chagas — Portfolio" />
+        <meta property="og:title" content="Jessé Chagas — Full Stack Developer" />
+        <meta property="og:description" content="CS student at UFCG · Full Stack Developer · Data Enthusiast. Building software and solving real problems since 2022." />
+        <meta property="og:image" content="https://jessechagas.dev/assets/images/og-image.svg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Jessé Chagas — Full Stack Developer Portfolio" />
+        <meta property="og:url" content="https://jessechagas.dev" />
+        <meta property="og:locale" content="pt_BR" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@jessechagas_dev" />
+        <meta name="twitter:title" content="Jessé Chagas — Full Stack Developer" />
+        <meta name="twitter:description" content="CS student at UFCG · Full Stack Developer · Data Enthusiast. Building since 2022." />
+        <meta name="twitter:image" content="https://jessechagas.dev/assets/images/og-image.svg" />
+        <meta name="twitter:image:alt" content="Jessé Chagas — Full Stack Developer Portfolio" />
+        <!-- Schema.org — Person (rich results on Google) -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Jessé Oliveira das Chagas",
+          "alternateName": "Jessé Chagas",
+          "url": "https://jessechagas.dev",
+          "image": "https://jessechagas.dev/assets/images/og-image.svg",
+          "email": "jessechagas2006@gmail.com",
+          "telephone": "+5583993285838",
+          "jobTitle": "Full Stack Developer",
+          "description": "Full Stack Developer and CS student at UFCG. Building software with Java, Python, PHP and JavaScript since 2022.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Campina Grande",
+            "addressRegion": "PB",
+            "addressCountry": "BR"
+          },
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "Universidade Federal de Campina Grande",
+            "alternateName": "UFCG",
+            "sameAs": "https://www.ufcg.edu.br"
+          },
+          "knowsAbout": [
+            "Java", "Spring Boot", "Python", "PHP", "Laravel",
+            "JavaScript", "Node.js", "HTML5", "CSS3", "Bootstrap",
+            "MySQL", "Figma", "Adobe Photoshop", "Adobe Illustrator",
+            "Flutter", "Firebase", "Git", "GitHub", "Godot 4", "WordPress"
+          ],
+          "sameAs": [
+            "https://github.com/JesseChagas",
+            "https://linkedin.com/in/jessechagas-dev"
+          ],
+          "hasOccupation": [
+            {
+              "@type": "Occupation",
+              "name": "CX & Data Specialist",
+              "occupationLocation": { "@type": "City", "name": "Campina Grande" }
+            },
+            {
+              "@type": "Occupation",
+              "name": "Online Content Manager",
+              "occupationLocation": { "@type": "City", "name": "Remote" }
+            }
+          ]
+        }
+        </script>
         <!-- Favicon -->
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         <link rel="shortcut icon" type="image/x-icon" href="assets/images/fa.svg" />
@@ -27,8 +96,13 @@
         <link rel="stylesheet" type="text/css" href="assets/css/odometer.min.css" />
         <!-- style css -->
         <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <!-- Devicon -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     </head>
     <body id="scroll-header">
+        <div class="scroll-progress-bar" id="scroll-progress"></div>
+        <div class="cursor-dot" id="cursor-dot"></div>
+        <div class="cursor-ring" id="cursor-ring"></div>
         <!-- preloader -->
         <div id="preloader" class="preloader">
             <div class="animation-preloader">
@@ -56,7 +130,7 @@
             <div class="sc-header-content">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-3 col-md-4 col-sm-5 col-5">
+                        <div class="col-lg-2 col-md-4 col-sm-5 col-5">
                             <div class="header-logo-area">
                                 <div class="sc-header-logo">
                                     <a href="#scroll-header"><img src="assets/images/logo.png" alt="Logo" /></a>
@@ -68,25 +142,32 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-4 col-sm-2 col-2">
+                        <div class="col-lg-7 col-md-4 col-sm-2 col-2">
                             <div class="sc-main-menu d-lg-block d-none text-center">
                                 <!-- Mainmenu Section Start -->
                                 <ul class="list-gap main-menu">
-                                    <li class="current-menu-item menu-item-has-children"><a class="active" href="#scroll-header">Home</a></li>
-                                    <li><a href="#scroll-about">About</a></li>
-                                    <li><a href="#scroll-service">Certifications</a></li>
-                                    <li><a href="#scroll-portfolio">Portfolio</a></li>
-                                    <li><a class="last-none" href="#scroll-contact">Contact</a></li>
+                                    <li class="current-menu-item menu-item-has-children"><a class="active" href="#scroll-header" data-i18n="nav.home">Home</a></li>
+                                    <li><a href="#scroll-about" data-i18n="nav.about">About</a></li>
+                                    <li><a href="#scroll-service" data-i18n="nav.certs">Certs</a></li>
+                                    <li><a href="#scroll-portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                                    <li><a href="#scroll-research" data-i18n="nav.research">Research</a></li>
+                                    <li><a class="last-none" href="#scroll-contact" data-i18n="nav.contact">Contact</a></li>
                                 </ul>
                                 <!-- Mainmenu Section End -->
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-5 col-5">
                             <div class="sc-menu-select-box d-flex align-items-center justify-content-end">
-                                <div class="header-button sc-pl-20 sc-md-pl-20">
-                                    <a class="sc-header-btn" href="#scroll-contact"
+                                <div class="header-button sc-pl-20 sc-md-pl-20 d-flex align-items-center">
+                                    <a class="sc-header-btn mag-btn" href="#scroll-contact" data-i18n="header.cta"
                                         >Let's Talk <i class="ri-chat-1-line"></i
                                     ></a>
+                                    <button class="cmd-trigger-chip" id="cmd-chip" title="Open command palette" aria-label="Command palette">
+                                        <i class="ri-command-line"></i> <kbd>Ctrl K</kbd>
+                                    </button>
+                                    <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">
+                                        <span id="lang-flag">🇧🇷</span>&nbsp;<span class="lact" id="lang-code">PT</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -101,26 +182,34 @@
                 <main>
                 <!--========== Banner Section Start ==============-->
                 <div class="banner-section sc-md-pt-75">
+                    <div class="hero-noise"></div>
                     <div class="container banner-container">
                         <div class="row align-items-center">
                             <div class="col-lg-7">
                                 <div class="banner-left-content">
-                                    <span class="sub-title sc-animation1"> Hello, ✌️ I'm Jessé Chagas</span>
+                                    <div class="otw-badge sc-animation1" style="opacity:0">
+                                        <span class="otw-dot"></span>
+                                        <span data-i18n="otw.text">Open to Work</span>
+                                    </div>
+                                    <span class="sub-title sc-animation1" data-i18n="hero.greeting"> Hello, ✌️ I'm Jessé Chagas</span>
                                     <h1 class="banner-title sc-animation2 white-Color sc-mb-10">
                                         Future<br />
                                         Computer <br />
-                                        <span class="active-color"> Scientist </span>
+                                        <span class="active-color" id="typewriter-text">Scientist</span>
                                     </h1>
                                     <div class="sc-animation6 sc-mb-30">
                                         <img src="assets/images/icon/broder.svg" alt="Image" />
                                     </div>
-                                    <p class="desc sc-animation3 sc-mb-40">
-                                        I am currently working as a full-stack freelancer and web developer.
+                                    <p class="desc sc-animation3 sc-mb-40" data-i18n="hero.desc">
+                                        Full Stack Developer · Data Enthusiast · CS student at UFCG.
+                                        Building software and solving real problems since 2022.
                                     </p>
-                                    <div class="banner-button sc-animation4 p-z-idex">
-                                        <a class="sc-primary-btn" href="https://api.whatsapp.com/send?phone=5583993285838"
+                                    <div class="banner-button sc-animation4 p-z-idex hero-btns">
+                                        <a class="sc-primary-btn mag-btn" href="https://api.whatsapp.com/send?phone=5583993285838"
                                             >Talk to me <i class="ri-arrow-right-line"></i
                                         ></a>
+                                        <a class="sc-outline-btn mag-btn" href="https://canva.link/vn2hsxk6idgahe2" target="_blank" rel="noopener"
+                                            ><i class="ri-download-2-line"></i> Download CV</a>
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +223,7 @@
                                         </div>
                                     </div>
                                     <div class="wrapper-text">
-                                        <span>Freelancer Available</span>
+                                        <span data-i18n="hero.freelance">Freelancer Available</span>
                                     </div>
                                 </div>
                             </div>
@@ -153,7 +242,7 @@
                             </li>      
                         </ul>
                         <div class="social-text">
-                            <span>Follow Me</span>
+                            <span data-i18n="hero.follow">Follow Me</span>
                         </div>
                     </div>
                     <div class="banner-scroll">
@@ -193,7 +282,7 @@
                                 </div>
                                 <div class="roll-item">
                                     <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Discord Bot Development</h4>
+                                        <h4 class="title">Data Analytics</h4>
                                         <img class="portal-icon" src="assets/images/icon/portal-1.svg" alt="Icon" />
                                     </div>
                                 </div>
@@ -225,7 +314,7 @@
                                 </div>
                                 <div class="roll-item">
                                     <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Discord Bot Development</h4>
+                                        <h4 class="title">Data Analytics</h4>
                                         <img class="portal-icon" src="assets/images/icon/portal-1.svg" alt="Icon" />
                                     </div>
                                 </div>
@@ -234,87 +323,41 @@
                     </div>
                     <!--========== Roll Section End ==============-->
 
-                    <!--========== Roll Section Start ==============-->
-                    <div class="sc-roll-section-three sc-pt-55 sc-pb-55">
-                        <div class="slide-roll">
-                            <div class="roll-box roll-box-revers">
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Full Stack Development</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Web Development</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Java Programming</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">SQL Database Management</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Discord Bot Development</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
+                </div>
+                <!--========== Stats Band ==============-->
+                <div class="stat-band">
+                    <div class="container">
+                        <div class="inner">
+                            <div class="stat-item">
+                                <div class="stat-num">10<span class="stat-plus">+</span></div>
+                                <span class="stat-label" data-i18n="stats.projects">Projects Delivered</span>
                             </div>
-                            <div class="roll-box roll-box-revers">
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Full Stack Development</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Web Development</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Java Programming</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">SQL Database Management</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
-                                <div class="roll-item">
-                                    <div class="roll-title d-flex align-items-center">
-                                        <h4 class="title">Discord Bot Development</h4>
-                                        <img class="portal-icon" src="assets/images/icon/portal-2.svg" alt="Icon" />
-                                    </div>
-                                </div>
+                            <div class="stat-item">
+                                <div class="stat-num"><span class="odometer" data-count="1">0</span></div>
+                                <span class="stat-label" data-i18n="stats.papers">Paper Published</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">4<span class="stat-plus">+</span></span>
+                                <span class="stat-label" data-i18n="stats.years">Years of Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">18<span class="stat-plus">+</span></span>
+                                <span class="stat-label" data-i18n="stats.techs">Technologies</span>
                             </div>
                         </div>
                     </div>
-                    <!--========== Roll Section End ==============-->
                 </div>
+
                 <!--========== About Section Start ==============-->
                 <div id="scroll-about" class="about-section dark-color sc-pt-115 sc-md-pt-75 sc-pb-120 sc-md-pb-80">
                     <div class="container ab-container">
                         <div class="row">
                             <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
                                 <div class="sc-heading-area sec-animation text-center sc-mb-70 sc-md-mb-50">
-                                    <span class="sub-title"> About Me 👋</span>
-                                    <h2 class="title">
-                                        I’ve been <span class="active">  Freelancer and Computer</span>
-                                        <span class="active-color"> Technician</span> Since 2022
+                                    <span class="sub-title" data-i18n="about.label"> About Me 👋</span>
+                                    <h2 class="title" data-i18n-html="about.title">
+                                        I’ve been <span class="active"> Full-Stack Developer and</span>
+                                        <span class="active-color"> Tech Professional</span> Since 2022
                                     </h2>
                                 </div>
                             </div>
@@ -323,43 +366,38 @@
                             <div class="col-lg-6 fade_bottom_animation">
                                 <div class="ab-left-content sc-md-mb-60">
                                     <div class="ab-text">
-                                        <div class="ab-mission sc-mb-30">About me</div>
-                                        <p class="desc sc-mb-25">
-                                            I have participated in software development projects, using programming languages such as Java, 
-                                            Python, JavaScript, and PHP. Additionally, I have experience working with various frameworks, 
-                                            including Bootstrap, Laravel, Discord.py, and utilizing libraries like Pandas for data manipulation.
-                                            In addition, I am proficient in design tools such as Illustrator, Photoshop, and Figma.
-                                            
+                                        <div class="ab-mission sc-mb-30" data-i18n="about.mission">About me</div>
+                                        <p class="desc sc-mb-25" data-i18n="about.desc1">
+                                            I build software using Java, Python, JavaScript, and PHP — with Spring Boot, Laravel, and Node.js.
+                                            Currently working as CX &amp; Data Specialist at Cupom Fiscal Sistemas and Online Content Manager at Ajardine Imóveis.
                                         </p>
-                                        <p class="desc sc-mb-25">
-                                            I am always seeking new challenges and opportunities to enhance my skills and knowledge. 
-                                            Currently, I am pursuing a degree in Computer Science at UFCG.
+                                        <p class="desc sc-mb-25" data-i18n="about.desc2">
+                                            I also study Data Analytics (Google Certificate), algorithms &amp; data structures, and IoT sensing platforms.
+                                            Proficient in Figma, Photoshop, and Illustrator. Pursuing a B.Sc. in Computer Science at UFCG (est. 2028).
                                         </p>
                                     </div>
                                     <div class="ab-counter d-flex align-items-center sc-mb-30">
                                         <div class="sc-counter-number d-flex align-items-center sc-mr-50">
                                             <div class="sc-count sc-mr-20">
                                                 <div class="sc-count">
-                                                    +<span class="odometer" data-count="2">0</span>
+                                                    +<span class="odometer" data-count="4">0</span>
                                                 </div>
                                             </div>
                                             <div class="sc-counter-text">
-                                                <span class="sc-title p-z-idex position-relative"
-                                                    >Years of <br />
-                                                    experience</span
+                                                <span class="sc-title p-z-idex position-relative" data-i18n="about.counter1"
+                                                    >Years of experience</span
                                                 >
                                             </div>
                                         </div>
                                         <div class="sc-counter-number d-flex align-items-center sc-mr-50">
                                             <div class="sc-count sc-mr-20">
                                                 <div class="sc-count">
-                                                    +<span class="odometer" data-count="100">0</span>
+                                                    +<span class="odometer" data-count="10">0</span>
                                                 </div>
                                             </div>
                                             <div class="sc-counter-text">
-                                                <span class="sc-title p-z-idex position-relative"
-                                                    >Successful <br />
-                                                    projects</span
+                                                <span class="sc-title p-z-idex position-relative" data-i18n="about.counter2"
+                                                    >Projects delivered</span
                                                 >
                                             </div>
                                         </div>
@@ -372,125 +410,115 @@
                             </div>
                             <div class="col-lg-6 fade_bottom_animation">
                                 <div class="ab-right-content">
-                                    <div class="ab-experience sc-mb-30">Experience & Skills</div>
-                                    <div class="ab-date-content d-flex align-items-center justify-content-between">
-                                        <div class="date-header">
-                                            <h6 class="title mb-0">Web Developer</h6>
-                                            <span class="sub-title"> IFPB</span>
+                                    <div class="ab-experience sc-mb-30" data-i18n="about.exp">Experience</div>
+
+                                    <!-- Visual Timeline -->
+                                    <div class="experience-timeline">
+                                        <div class="timeline-entry">
+                                            <div class="t-role" data-i18n="exp1.role">Web Developer · Intern</div>
+                                            <div class="t-company">IFPB — Instituto Federal da Paraíba</div>
+                                            <div class="t-date">Jul 2022 – Jan 2023</div>
+                                            <div class="t-tags">
+                                                <span class="t-tag">PHP</span>
+                                                <span class="t-tag">HTML/CSS</span>
+                                                <span class="t-tag">Java</span>
+                                                <span class="t-tag">INPI Registration</span>
+                                            </div>
                                         </div>
-                                        <div class="ab-date">
-                                            <span class="date">July 2022 - January 2023</span>
+                                        <div class="timeline-entry">
+                                            <div class="t-role" data-i18n="exp2.role">Online Content Manager · Trainee</div>
+                                            <div class="t-company">Ajardine Imóveis · Remote</div>
+                                            <div class="t-date">Sep 2023 – Present</div>
+                                            <div class="t-tags">
+                                                <span class="t-tag">WordPress</span>
+                                                <span class="t-tag">SEO</span>
+                                                <span class="t-tag">Web Dev</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="ab-date-content d-flex align-items-center justify-content-between">
-                                        <div class="date-header">
-                                            <h6 class="title mb-0">Discord Bot Developer</h6>
-                                            <span class="sub-title"> IFPB</span>
+                                        <div class="timeline-entry">
+                                            <div class="t-role" data-i18n="exp3.role">CX & Data Specialist · Part-time</div>
+                                            <div class="t-company">Cupom Fiscal Sistemas</div>
+                                            <div class="t-date">Apr 2024 – Present</div>
+                                            <div class="t-tags">
+                                                <span class="t-tag">Firebird / SQL</span>
+                                                <span class="t-tag">IBExpert</span>
+                                                <span class="t-tag">Support</span>
+                                                <span class="t-tag">Data</span>
+                                            </div>
                                         </div>
-                                        <div class="ab-date">
-                                            <span class="date"> January 2023 - July 2023</span>
-                                        </div>
-                                    </div>
-                                    <div class="ab-date-content d-flex align-items-center justify-content-between">
-                                        <div class="date-header">
-                                            <h6 class="title mb-0">eCommerce Developer</h6>
-                                            <span class="sub-title"> Ajardine Imóveis</span>
-                                        </div>
-                                        <div class="ab-date">
-                                            <span class="date"> August 2023 - Present</span>
-                                        </div>
-                                    </div>
-                                    <div class="ab-social-list sc-mt-50">
-                                        <h5 class="title sc-mb-25">My Skill</h5>
-                                        <div class="list">
-                                            <ul class="list-gap">
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/python.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> Python</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/java.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> Java</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/php.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> Php</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/javascript.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> JavaScript</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/html.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> HTML</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/css.svg" alt="Icon" width="60" height="60"/>
-                                                    </span>
-                                                    <span class="d-block"> CSS</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/nodejs.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> NodeJs</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/bootstrap.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> Bootstrap</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/laravel.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> Laravel</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/mysql.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> MySql</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/wordpress.svg" alt="Icon" width="50" height="50"/>
-                                                    </span>
-                                                    <span class="d-block"> WordPress</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/figma.svg" alt="Icon"
-                                                    /></span>
-                                                    <span class="d-block"> Figma</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/photoshop.svg" alt="Icon" />
-                                                    </span>
-                                                    <span class="d-block"> Photoshop</span>
-                                                </li>
-                                                <li>
-                                                    <span class="px-border">
-                                                        <img src="assets/images/icon/illustrator.svg" alt="Icon" />
-                                                    </span>
-                                                    <span class="d-block"> Illustrator </span>
-                                                </li>
-                                            </ul>
+                                        <div class="timeline-entry">
+                                            <div class="t-role" data-i18n="exp4.role">Freelance Developer</div>
+                                            <div class="t-company">CodeX Jr. · Gente e Gestão · Hybrid</div>
+                                            <div class="t-date">May 2024 – Present</div>
+                                            <div class="t-tags">
+                                                <span class="t-tag">Web Dev</span>
+                                                <span class="t-tag">Consulting</span>
+                                                <span class="t-tag">JavaScript</span>
+                                            </div>
                                         </div>
                                     </div>
+
+                                    <!-- Skill Bars -->
+                                    <div class="ab-experience sc-mb-0" style="margin-top:40px;" data-i18n="about.skills">Skills</div>
+                                    <div id="skills-grid">
+                                        <!-- Back-end -->
+                                        <div class="devicon-section-label">Back-end</div>
+                                        <div class="devicon-chips">
+                                            <span class="devicon-chip"><i class="devicon-java-plain colored"></i>Java</span>
+                                            <span class="devicon-chip"><i class="devicon-spring-plain colored"></i>Spring Boot</span>
+                                            <span class="devicon-chip"><i class="devicon-python-plain colored"></i>Python</span>
+                                            <span class="devicon-chip"><i class="devicon-php-plain colored"></i>PHP</span>
+                                            <span class="devicon-chip"><i class="devicon-laravel-plain colored"></i>Laravel</span>
+                                            <span class="devicon-chip"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+                                        </div>
+                                        <!-- Front-end -->
+                                        <div class="devicon-section-label">Front-end</div>
+                                        <div class="devicon-chips">
+                                            <span class="devicon-chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+                                            <span class="devicon-chip"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+                                            <span class="devicon-chip"><i class="devicon-html5-plain colored"></i>HTML5</span>
+                                            <span class="devicon-chip"><i class="devicon-css3-plain colored"></i>CSS3</span>
+                                            <span class="devicon-chip"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
+                                        </div>
+                                        <!-- Design & Tools -->
+                                        <div class="devicon-section-label">Design & Tools</div>
+                                        <div class="devicon-chips">
+                                            <span class="devicon-chip"><i class="devicon-figma-plain colored"></i>Figma</span>
+                                            <span class="devicon-chip"><i class="devicon-photoshop-plain colored"></i>Photoshop</span>
+                                            <span class="devicon-chip"><i class="devicon-illustrator-plain colored"></i>Illustrator</span>
+                                            <span class="devicon-chip"><i class="devicon-flutter-plain colored"></i>Flutter</span>
+                                            <span class="devicon-chip"><i class="devicon-firebase-plain colored"></i>Firebase</span>
+                                            <span class="devicon-chip"><i class="devicon-git-plain colored"></i>Git</span>
+                                            <span class="devicon-chip"><i class="devicon-github-original colored"></i>GitHub</span>
+                                            <span class="devicon-chip"><i class="devicon-godot-plain colored"></i>Godot 4</span>
+                                            <span class="devicon-chip"><i class="devicon-wordpress-plain colored"></i>WordPress</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- GitHub Live Stats -->
+                        <div class="row sc-mt-60">
+                            <div class="col-12">
+                                <div class="gh-section-header">
+                                    <span class="gh-label">GitHub Activity</span>
+                                    <a href="https://github.com/JesseChagas" target="_blank" rel="noopener" class="gh-profile-link">
+                                        <i class="ri-github-line"></i> JesseChagas
+                                    </a>
+                                </div>
+                                <!-- Contribution graph — ghchart.rshah.org (very reliable PNG) -->
+                                <div class="gh-contrib-wrap">
+                                    <img
+                                        src="https://ghchart.rshah.org/4dffaf/JesseChagas"
+                                        alt="Jessé Chagas GitHub Contribution Graph"
+                                        class="gh-contrib-img"
+                                        loading="lazy"
+                                    />
+                                </div>
+                                <!-- Streak stats — demolab (reliable) -->
+                                <div class="gh-stats-wrap">
+                                    <img src="https://streak-stats.demolab.com?user=JesseChagas&theme=dark&background=0e0e0e&ring=4dffaf&fire=4dffaf&currStreakLabel=4dffaf&border=1e1e1e&dates=555555&sideLabels=555555&currStreakNum=ffffff&sideNums=ffffff" alt="GitHub Streak" loading="lazy" />
                                 </div>
                             </div>
                         </div>
@@ -504,8 +532,8 @@
                         <div class="row">
                             <div class="col-lg-6 offset-lg-3">
                                 <div class="sc-heading-area sec-animation text-center sc-mb-70">
-                                    <span class="sub-title"> Specialities 👋</span>
-                                    <h2 class="title">
+                                    <span class="sub-title" data-i18n="certs.label"> Specialities 👋</span>
+                                    <h2 class="title" data-i18n-html="certs.title">
                                         These Are My
                                         <span class="active-color"> Certifications</span>
                                     </h2>
@@ -622,8 +650,151 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Article WICS 2024 -->
+                                <div
+                                    class="sc-service-item service-br"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="100"
+                                >
+                                    <div class="service-content">
+                                        <h3 class="sc-mb-10">
+                                            <a class="title" href="https://sol.sbc.org.br/index.php/wics/article/view/29517" target="_blank">Article Published — WICS 2024</a>
+                                        </h3>
+                                        <p class="service-desc">
+                                            "IA burlada: elaboração de prompts maliciosos no ChatGPT e seus impactos para a sociedade" — published at WICS 2024 (Jul/2024), developed at LAPLIN / IFPB with João Paiva, Danyllo Albuquerque and Golbery Rodrigues.
+                                        </p>
+                                    </div>
+                                    <div class="service-wrapper-inner d-flex align-items-center justify-content-end">
+                                        <div class="service-btn-active">
+                                            <i class="ri-add-line"></i>
+                                        </div>
+                                        <div class="service-btn d-none">
+                                            <i class="ri-subtract-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
+
+                        <!-- ── 3D Certification Cards (2024–2026) ── -->
+                        <div class="cert-3d-section">
+                            <div class="text-center sc-mb-50">
+                                <span class="section-label">Recent Certifications</span>
+                                <h3 class="white-Color" style="font-size:36px;margin-bottom:0;">2024 – 2026</h3>
+                            </div>
+                            <div class="row">
+                                <!-- Google: Foundations -->
+                                <div class="col-lg-4 col-md-6 cert-3d-item">
+                                    <div class="cert-card">
+                                        <div class="cert-card-inner">
+                                            <div class="cert-card-front">
+                                                <div class="cert-badge google-badge">
+                                                    <i class="ri-bar-chart-2-line" style="font-size:22px;color:#fff;"></i>
+                                                </div>
+                                                <h5 class="cert-name">Foundations: Data, Data, Everywhere</h5>
+                                                <span class="cert-org">Google · Coursera</span>
+                                                <span class="cert-info">15h &nbsp;·&nbsp; May 2026</span>
+                                                <div class="cert-hover-hint">Hover to see details ↻</div>
+                                            </div>
+                                            <div class="cert-card-back">
+                                                <h5 class="cert-name-back">Foundations: Data, Data, Everywhere</h5>
+                                                <p class="cert-desc">Introduction to data analytics, data ecosystem fundamentals and the role of the data analyst. Part of Google Data Analytics Certificate.</p>
+                                                <a href="https://coursera.org/verify/MF8MS2PDJGX1" target="_blank" class="cert-verify-link">Verify Certificate ↗</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Google: Ask Questions -->
+                                <div class="col-lg-4 col-md-6 cert-3d-item">
+                                    <div class="cert-card">
+                                        <div class="cert-card-inner">
+                                            <div class="cert-card-front">
+                                                <div class="cert-badge google-badge">
+                                                    <i class="ri-question-answer-line" style="font-size:22px;color:#fff;"></i>
+                                                </div>
+                                                <h5 class="cert-name">Ask Questions to Make Data-Driven Decisions</h5>
+                                                <span class="cert-org">Google · Coursera</span>
+                                                <span class="cert-info">15h &nbsp;·&nbsp; May 2026</span>
+                                                <div class="cert-hover-hint">Hover to see details ↻</div>
+                                            </div>
+                                            <div class="cert-card-back">
+                                                <h5 class="cert-name-back">Ask Questions to Make Data-Driven Decisions</h5>
+                                                <p class="cert-desc">Structured questioning techniques to support data-driven decisions, analytical thinking and problem-solving. Part of Google Data Analytics Certificate.</p>
+                                                <a href="https://coursera.org/verify/SUJHWZTC364D" target="_blank" class="cert-verify-link">Verify Certificate ↗</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- VIRTUS: EDA Basic -->
+                                <div class="col-lg-4 col-md-6 cert-3d-item">
+                                    <div class="cert-card">
+                                        <div class="cert-card-inner">
+                                            <div class="cert-card-front">
+                                                <div class="cert-badge virtus-badge">
+                                                    <i class="ri-code-s-slash-line" style="font-size:22px;color:#fff;"></i>
+                                                </div>
+                                                <h5 class="cert-name">Data Structures &amp; Algorithms for HW — Basic</h5>
+                                                <span class="cert-org">VIRTUS / UFCG · Cap.ON</span>
+                                                <span class="cert-info">10h &nbsp;·&nbsp; Apr – May 2026</span>
+                                                <div class="cert-hover-hint">Hover to see details ↻</div>
+                                            </div>
+                                            <div class="cert-card-back">
+                                                <h5 class="cert-name-back">EDA for Hardware — Basic</h5>
+                                                <p class="cert-desc">Intro to algorithms, Big O / Big Theta / Big Omega notation, linear &amp; binary search, brute force and backtracking techniques.</p>
+                                                <span class="cert-no-link">Cap.ON · VIRTUS / UFCG</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- VIRTUS: EDA Advanced -->
+                                <div class="col-lg-6 col-md-6 cert-3d-item">
+                                    <div class="cert-card">
+                                        <div class="cert-card-inner">
+                                            <div class="cert-card-front">
+                                                <div class="cert-badge virtus-badge">
+                                                    <i class="ri-share-line" style="font-size:22px;color:#fff;"></i>
+                                                </div>
+                                                <h5 class="cert-name">Data Structures &amp; Algorithms for Hardware</h5>
+                                                <span class="cert-org">VIRTUS / UFCG · Cap.ON</span>
+                                                <span class="cert-info">30h &nbsp;·&nbsp; Sep – Oct 2024</span>
+                                                <div class="cert-hover-hint">Hover to see details ↻</div>
+                                            </div>
+                                            <div class="cert-card-back">
+                                                <h5 class="cert-name-back">EDA for Hardware</h5>
+                                                <p class="cert-desc">Algorithm complexity analysis, design techniques (divide &amp; conquer, greedy, dynamic programming) and graph theory (BFS/DFS, MST, Shortest Path).</p>
+                                                <span class="cert-no-link">Cap.ON · VIRTUS / UFCG · 2024</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- VIRTUS: IoT -->
+                                <div class="col-lg-6 col-md-6 cert-3d-item">
+                                    <div class="cert-card">
+                                        <div class="cert-card-inner">
+                                            <div class="cert-card-front">
+                                                <div class="cert-badge iot-badge">
+                                                    <i class="ri-cpu-line" style="font-size:22px;color:#fff;"></i>
+                                                </div>
+                                                <h5 class="cert-name">Fundamentals of Intelligent Sensing Platforms for Industry</h5>
+                                                <span class="cert-org">VIRTUS / UFCG · Cap.ON</span>
+                                                <span class="cert-info">20h &nbsp;·&nbsp; Apr – May 2026</span>
+                                                <div class="cert-hover-hint">Hover to see details ↻</div>
+                                            </div>
+                                            <div class="cert-card-back">
+                                                <h5 class="cert-name-back">Intelligent Sensing Platforms</h5>
+                                                <p class="cert-desc">Smart sensing platform concepts, physical &amp; connectivity components, sensor data infrastructure, and IoT security for industrial environments.</p>
+                                                <span class="cert-no-link">Cap.ON · VIRTUS / UFCG · 2026</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ── End 3D Certification Cards ── -->
+
                     </div>
                 </div>
                 <!--========== Service Section End ==============-->
@@ -637,18 +808,24 @@
                         <div class="row align-items-center">
                             <div class="col-lg-6">
                                 <div class="sc-heading-area sec-animation sc-mb-70 sc-md-mb-30">
-                                    <span class="sub-title"> Portfolio 👏 </span>
-                                    <h2 class="title">
+                                    <span class="sub-title" data-i18n="portfolio.label"> Portfolio 👏 </span>
+                                    <h2 class="title" data-i18n-html="portfolio.title">
                                         These Are My
                                         <span class="active-color"> Portfolio</span>
                                     </h2>
                                 </div>
                             </div>
                             <div class="col-lg-6">
+                                <div class="pf-filters">
+                                    <button class="pf-btn active" data-filter="all" data-i18n="pf.all">All</button>
+                                    <button class="pf-btn" data-filter="web" data-i18n="pf.web">Web</button>
+                                    <button class="pf-btn" data-filter="python" data-i18n="pf.python">Python</button>
+                                    <button class="pf-btn" data-filter="game" data-i18n="pf.game">Game</button>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-6 col-md-6 portfolio-col" data-category="web">
                                 <div
                                     class="portfolio-item sc-md-mb-30"
                                     data-sal="slide-up"
@@ -656,8 +833,14 @@
                                     data-sal-delay="100"
                                 >
                                     <a class="modal-popup" href="#portfolio-wrapper">
-                                        <img src="assets/images/project/header lajedo.jpg" alt="Image"
-                                    /></a>
+                                        <img src="assets/images/project/header lajedo.jpg" alt="Image" />
+                                        <div class="hover-stack-overlay">
+                                            <span class="hstack-chip"><i class="devicon-html5-plain colored"></i>HTML5</span>
+                                            <span class="hstack-chip"><i class="devicon-php-plain colored"></i>PHP</span>
+                                            <span class="hstack-chip"><i class="devicon-css3-plain colored"></i>CSS3</span>
+                                            <span class="hstack-chip"><i class="devicon-java-plain colored"></i>Java</span>
+                                        </div>
+                                    </a>
                                     <div class="portfolio-content d-flex align-items-center justify-content-between">
                                         <div class="portfolio-header">
                                             <span class="sub-title"> Web Developer</span>
@@ -669,7 +852,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6">
+                            <div class="col-lg-6 col-md-6 portfolio-col" data-category="web">
                                 <div
                                     class="portfolio-item sc-pt-100 sc-md-pt-0 sc-md-mb-30"
                                     data-sal="slide-up"
@@ -678,10 +861,17 @@
                                 >
                                     <a class="modal-popup" href="#portfolio-wrapper2">
                                         <img src="assets/images/project/header ajardine.png" alt="Image" />
+                                        <div class="hover-stack-overlay">
+                                            <span class="hstack-chip"><i class="devicon-php-plain colored"></i>PHP</span>
+                                            <span class="hstack-chip"><i class="devicon-laravel-plain colored"></i>Laravel</span>
+                                            <span class="hstack-chip"><i class="devicon-mysql-plain colored"></i>MySQL</span>
+                                            <span class="hstack-chip"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span>
+                                            <span class="hstack-chip"><i class="devicon-figma-plain colored"></i>Figma</span>
+                                        </div>
                                     </a>
                                     <div class="portfolio-content d-flex align-items-center justify-content-between">
                                         <div class="portfolio-header">
-                                            <span class="sub-title"> eCommerce Developer </span>
+                                            <span class="sub-title"> Web & Content Manager</span>
                                             <h4><a class="modal-popup title" href="#portfolio-wrapper2"> Ajardine Imóveis</a></h4>
                                         </div>
                                         <div class="portfolio-arrow">
@@ -690,8 +880,128 @@
                                     </div>
                                 </div>
                             </div>
-                            
                         </div>
+
+                        <!-- Row 2: Client Projects cont. + BE HUMBLE Bot -->
+                        <div class="row sc-mt-30">
+                            <div class="col-lg-6 col-md-6 portfolio-col" data-category="web">
+                                <div
+                                    class="portfolio-item sc-md-mb-30"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="100"
+                                >
+                                    <a class="modal-popup" href="#portfolio-wrapper5">
+                                        <img src="assets/images/project/HeaderBrasil%20representacoes.png" alt="Brasil Representações" />
+                                        <div class="hover-stack-overlay">
+                                            <span class="hstack-chip"><i class="devicon-wordpress-plain colored"></i>WordPress</span>
+                                            <span class="hstack-chip"><i class="devicon-css3-plain colored"></i>CSS3</span>
+                                            <span class="hstack-chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+                                        </div>
+                                    </a>
+                                    <div class="portfolio-content d-flex align-items-center justify-content-between">
+                                        <div class="portfolio-header">
+                                            <span class="sub-title"> Web Development · Institucional</span>
+                                            <h4><a class="modal-popup title" href="#portfolio-wrapper5"> Brasil Representações</a></h4>
+                                        </div>
+                                        <div class="portfolio-arrow">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 portfolio-col" data-category="python">
+                                <div
+                                    class="portfolio-item sc-pt-100 sc-md-pt-0 sc-md-mb-30"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="200"
+                                >
+                                    <a class="modal-popup" href="#portfolio-wrapper6">
+                                        <div class="proj-thumb-inner thumb-humble-bot">
+                                            <i class="ri-robot-line"></i>
+                                            <span class="proj-stack">Python · discord.py · openpyxl</span>
+                                            <div class="hover-stack-overlay">
+                                                <span class="hstack-chip"><i class="devicon-python-plain colored"></i>Python</span>
+                                                <span class="hstack-chip">discord.py</span>
+                                                <span class="hstack-chip">openpyxl</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="portfolio-content d-flex align-items-center justify-content-between">
+                                        <div class="portfolio-header">
+                                            <span class="sub-title"> Discord Bot · Community Management</span>
+                                            <h4><a class="modal-popup title" href="#portfolio-wrapper6"> BE HUMBLE Bot</a></h4>
+                                        </div>
+                                        <div class="portfolio-arrow">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Personal Projects -->
+                        <div class="row sc-mt-30">
+                            <div class="col-lg-6 col-md-6 portfolio-col" data-category="python">
+                                <div
+                                    class="portfolio-item sc-md-mb-30"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="100"
+                                >
+                                    <a class="modal-popup" href="#portfolio-wrapper3">
+                                        <div class="proj-thumb-inner thumb-promobot">
+                                            <i class="ri-robot-2-line"></i>
+                                            <span class="proj-stack">Python · WhatsApp · Shopee API</span>
+                                            <div class="hover-stack-overlay">
+                                                <span class="hstack-chip"><i class="devicon-python-plain colored"></i>Python</span>
+                                                <span class="hstack-chip"><i class="devicon-telegram-plain colored"></i>Telethon</span>
+                                                <span class="hstack-chip">WhatsApp API</span>
+                                                <span class="hstack-chip">Shopee API</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="portfolio-content d-flex align-items-center justify-content-between">
+                                        <div class="portfolio-header">
+                                            <span class="sub-title"> Automation · Affiliate Marketing</span>
+                                            <h4><a class="modal-popup title" href="#portfolio-wrapper3"> Promo Bot</a></h4>
+                                        </div>
+                                        <div class="portfolio-arrow">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 portfolio-col" data-category="web game">
+                                <div
+                                    class="portfolio-item sc-pt-100 sc-md-pt-0 sc-md-mb-30"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="200"
+                                >
+                                    <a class="modal-popup" href="#portfolio-wrapper4">
+                                        <img src="assets/images/project/advergameIngame.png" alt="Crise Habitacional" />
+                                        <div class="hover-stack-overlay">
+                                            <span class="hstack-chip"><i class="devicon-godot-plain colored"></i>Godot 4</span>
+                                            <span class="hstack-chip">GDScript</span>
+                                            <span class="hstack-chip">Google Sheets API</span>
+                                            <span class="hstack-chip">dreamlo</span>
+                                        </div>
+                                    </a>
+                                    <div class="portfolio-content d-flex align-items-center justify-content-between">
+                                        <div class="portfolio-header">
+                                            <span class="sub-title"> Educational Advergame · Windows · Android</span>
+                                            <h4><a class="modal-popup title" href="#portfolio-wrapper4"> Crise Habitacional</a></h4>
+                                        </div>
+                                        <div class="portfolio-arrow">
+                                            <i class="ri-arrow-right-line"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <!-- portfolio-madal Start -->
@@ -771,6 +1081,23 @@
                             <a class="sc-primary-btn" href="https://lajedodomarinho.com.br" target="_blank">
                                 View Project<i class="ri-arrow-right-line"></i
                             ></a>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <div class="case-step">
+                            <div class="case-num">01</div>
+                            <div class="case-label">Problem</div>
+                            <p class="case-desc">The Lajedo do Marinho tourist site in Boqueirão/PB had zero digital presence — visitor reach was limited entirely to word-of-mouth.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">02</div>
+                            <div class="case-label">Solution</div>
+                            <p class="case-desc">Built a full website via an IFPB + community partnership, covering socio-historical research, image repository, content strategy, and HTML/PHP/CSS development.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">03</div>
+                            <div class="case-label">Impact</div>
+                            <p class="case-desc">Live at lajedodomarinho.com.br — the region's cultural heritage became discoverable nationwide for the first time.</p>
                         </div>
                     </div>
                     <div class="sc-portfolio-text">
@@ -896,6 +1223,23 @@
                             ></a>
                         </div>
                     </div>
+                    <div class="case-study">
+                        <div class="case-step">
+                            <div class="case-num">01</div>
+                            <div class="case-label">Problem</div>
+                            <p class="case-desc">Real estate agency had no digital presence — all leads were phone-only, losing buyers who search for properties online.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">02</div>
+                            <div class="case-label">Solution</div>
+                            <p class="case-desc">End-to-end real estate platform with a property database, responsive layout, SEO, and strict brand adherence to the client's IDV manual.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">03</div>
+                            <div class="case-label">Impact</div>
+                            <p class="case-desc">Live at ajardine.com.br — digital presence expanded client reach well beyond the local market with measurable new inquiry volume.</p>
+                        </div>
+                    </div>
                     <div class="sc-portfolio-text">
                         <h3 class="sc-title">Project Description</h3>
                         <p class="des sc-mb-0">
@@ -978,7 +1322,489 @@
                 </div>
                 <!-- portfolio-madal End -->
 
+                <!-- portfolio-madal Start: Promo Bot -->
+                <div id="portfolio-wrapper3" class="sc-portfolio-content-area zoom-anim-dialog mfp-hide">
+                    <div class="portfolio-inner-content sc-mb-35 pl-0">
+                        <div class="portfolio-text">
+                            <h4 class="cate-title white-color">Promo Bot</h4>
+                            <p class="des sc-mb-0">
+                                A Python automation system that monitors Mercado Livre and Shopee for deals,
+                                filters them by discount, price range, category and coupon availability,
+                                generates branded product images and delivers curated affiliate promotions
+                                to multiple WhatsApp groups simultaneously — fully hands-off after setup.
+                            </p>
+                        </div>
+                        <div class="sc-inner-list d-flex align-items-center justify-content-between sc-mb-30">
+                            <ul class="list-gap">
+                                <li><span>Type: </span> Affiliate Marketing Automation</li>
+                                <li><span>Stack: </span> Python · WhatsApp API · Shopee Affiliate API · Telethon</li>
+                            </ul>
+                            <ul class="list-gap">
+                                <li><span>Year: </span> 2024</li>
+                                <li><span>Category: </span> Automation · Affiliate</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-button">
+                            <a class="sc-primary-btn" href="https://github.com/JesseChagas" target="_blank">
+                                GitHub <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <div class="case-step">
+                            <div class="case-num">01</div>
+                            <div class="case-label">Problem</div>
+                            <p class="case-desc">Running WhatsApp promo groups manually meant hours of searching deals across Mercado Livre and Shopee, converting links to affiliate URLs and formatting messages by hand.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">02</div>
+                            <div class="case-label">Solution</div>
+                            <p class="case-desc">Python system that polls ML + Shopee APIs, filters by discount %, price range, national/imported flag and coupon ratio, generates branded images and pushes affiliate-linked posts to multiple WhatsApp groups.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">03</div>
+                            <div class="case-label">Impact</div>
+                            <p class="case-desc">Zero manual effort after setup — multiple groups, each with its own category config, receive curated deals 24/7 with deduplication and ML coupon mirroring from Telegram channels.</p>
+                        </div>
+                    </div>
+                    <div class="sc-portfolio-text">
+                        <h3 class="sc-title">Project Description</h3>
+                        <p class="des sc-mb-0">
+                            - Polls Mercado Livre and Shopee APIs on a configurable interval, filtering by minimum discount, price range and national/imported flag;<br>
+                            - Multi-group routing: each WhatsApp group has its own category JSON with keywords, so tech deals go to one group and beauty deals to another;<br>
+                            - Coupon-ratio engine (e.g. every 10 posts, at least 1 must have a coupon) with automatic fallback;<br>
+                            - Telegram userbot mirrors coupon posts from promo channels and re-delivers them to WhatsApp with affiliate links;<br>
+                            - Image generator wraps product photos in a branded frame (per-group configurable);<br>
+                            - Deduplication cache with 120h TTL prevents the same deal from being sent twice;<br>
+                            - Tier distribution system prioritises high-value deals (60% high / 30% mid / 10% low) per cycle.
+                        </p>
+                    </div>
+                    <div class="sc-working-content">
+                        <div class="sc-working-content-box sc-mb-40">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Multi-group Routing</h5>
+                                        <p class="des">Each WhatsApp group has its own category config — tech deals, beauty, electronics — all managed from a single bot instance.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Telegram Mirror</h5>
+                                        <p class="des">Userbot watches curated Telegram promo channels and re-delivers ML coupon posts to WhatsApp with affiliate links injected automatically.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Smart Filtering</h5>
+                                        <p class="des">Discount threshold, price range, coupon ratio, tier distribution and a 120h dedup cache ensure only quality deals reach the groups.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- portfolio-madal End -->
+
+                <!-- portfolio-madal Start: Crise Habitacional -->
+                <div id="portfolio-wrapper4" class="sc-portfolio-content-area zoom-anim-dialog mfp-hide">
+                    <div class="portfolio-slider-area sc-mb-40">
+                        <div class="swiper sc-portfolio-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergamemenu.png" alt="Menu Principal" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameDificuldade.png" alt="Seleção de Dificuldade" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameDialogue1.png" alt="Cutscene — Família Sonhadora" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameDialogue2.png" alt="Cutscene — Mercado Explorador" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameIngame.png" alt="Gameplay" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergamePesquisa.png" alt="Pesquisa Educativa Integrada" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameDialogueWin.png" alt="Vitória — Diálogo" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameEndscreenwin.png" alt="Tela de Vitória" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameDialoguelose.png" alt="Derrota — Diálogo" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameEndscreenlose.png" alt="Tela de Derrota" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/advergameRankingOnline.png" alt="Ranking Online" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="portfolio-inner-content sc-mb-35 pl-0">
+                        <div class="portfolio-text">
+                            <h4 class="cate-title white-color">Crise Habitacional — A Jornada da Família Sonhadora</h4>
+                            <p class="des sc-mb-0">
+                                Educational advergame that blends classic Pong mechanics with a social narrative about Brazil's housing crisis.
+                                The player takes the role of the Família Sonhadora, collecting bricks (homeownership milestones) while dodging eviction notices thrown by the Mercado Explorador antagonist.
+                                Built in Godot 4 with statically-typed GDScript — includes 4 difficulty modes, an in-game educational survey, a real-time global leaderboard, and standalone builds for Windows and Android.
+                            </p>
+                        </div>
+                        <div class="sc-inner-list d-flex align-items-center justify-content-between sc-mb-30">
+                            <ul class="list-gap">
+                                <li><span>Type: </span> Educational Advergame / Arcade</li>
+                                <li><span>Engine: </span> Godot 4 · GDScript (strict static typing)</li>
+                                <li><span>Theme: </span> SDG 11 — Sustainable Cities</li>
+                            </ul>
+                            <ul class="list-gap">
+                                <li><span>Year: </span> 2024</li>
+                                <li><span>Platforms: </span> Windows · Android · Web panel</li>
+                                <li><span>Size: </span> ~600 KB standalone</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-button">
+                            <a class="sc-primary-btn" href="https://github.com/JesseChagas" target="_blank">
+                                GitHub <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <div class="case-step">
+                            <div class="case-num">01</div>
+                            <div class="case-label">Problem</div>
+                            <p class="case-desc">A social awareness campaign needed high engagement and public opinion data — static materials failed to retain attention or generate actionable insights.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">02</div>
+                            <div class="case-label">Solution</div>
+                            <p class="case-desc">Godot 4 advergame with a 3-act narrative, 4 difficulty modes, a 6-question in-game survey, and a global online leaderboard — all in ~600 KB with zero external dependencies.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">03</div>
+                            <div class="case-label">Impact</div>
+                            <p class="case-desc">Survey responses collected automatically to Google Sheets with offline local backup; Competition mode features a real-time leaderboard synced across all devices via 5-second polling.</p>
+                        </div>
+                    </div>
+                    <div class="sc-portfolio-text">
+                        <h3 class="sc-title">Project Description</h3>
+                        <p class="des sc-mb-0">
+                            - Pong mechanics adapted with a 3-act social narrative (opening, pre-match confrontation, ending cutscenes);<br>
+                            - 4 modes: Easy / Medium / Reality (10 bricks, 3 evictions) / Competition (survival + live ranking);<br>
+                            - 6-question educational survey intercalated into gameplay — answers sent to Google Sheets via HTTP POST, with offline local TXT backup (unique timestamped filename per device);<br>
+                            - Real-time global leaderboard via dreamlo.com API with 5-second auto-polling; standalone HTML panel (~12 KB) for projector / tablet / QR Code display;<br>
+                            - Characters with multiple poses and dynamic dialogue; original chiptune soundtrack (8 SFX + 2 tracks generated programmatically);<br>
+                            - Windows standalone build + Android fullscreen landscape with touch controls (left/right half-screen tap);<br>
+                            - Strict static typing throughout GDScript 4 with warnings treated as errors.
+                        </p>
+                    </div>
+                    <div class="sc-working-content">
+                        <div class="sc-working-content-box sc-mb-40">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Integrated Research Survey</h5>
+                                        <p class="des">6 housing-crisis questions intercalated into gameplay. Answers go straight to Google Sheets with an offline local backup — unique timestamped filename per device guarantees zero data loss.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Real-time Online Ranking</h5>
+                                        <p class="des">Global leaderboard via dreamlo.com with 5-second polling — any run completed on any device instantly updates everyone's ranking. Standalone HTML panel for projector / tablet display via QR Code.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Social Narrative + SDG 11</h5>
+                                        <p class="des">"Reality" difficulty mirrors the lives of Brazil's 8 million people without adequate housing. Characters, cutscenes and antagonist dialogue reinforce the SDG 11 — Sustainable Cities message throughout.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- portfolio-madal End -->
+
+                <!-- portfolio-modal Start: Brasil Representações -->
+                <div id="portfolio-wrapper5" class="sc-portfolio-content-area zoom-anim-dialog mfp-hide">
+                    <div class="portfolio-slider-area sc-mb-40">
+                        <div class="swiper sc-portfolio-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/HeaderBrasil%20representacoes.png" alt="Brasil Representações — Header" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/meioBrasil%20representacoes.png" alt="Brasil Representações — Meio" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/starsbrasil%20representacoes.png" alt="Brasil Representações — Depoimentos" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/razaobrasil%20representacoes.png" alt="Brasil Representações — Razão" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="sc-project-image">
+                                        <img src="assets/images/project/Quemsomosbrasil%20representacoes.png" alt="Brasil Representações — Quem Somos" style="display:block;margin:0 auto;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                    <div class="portfolio-inner-content sc-mb-35 pl-0">
+                        <div class="portfolio-text">
+                            <h4 class="cate-title white-color">Brasil Representações</h4>
+                            <p class="des sc-mb-0">
+                                Full institutional website for a company specialising in educational materials
+                                and equipment for public sector organisations. Built in WordPress, the site presents
+                                the company, its products, client testimonials, partners, a book catalogue and a
+                                contact form — with a professional design aligned to the brand's navy-blue and teal identity.
+                            </p>
+                        </div>
+                        <div class="sc-inner-list d-flex align-items-center justify-content-between sc-mb-30">
+                            <ul class="list-gap">
+                                <li><span>Client: </span> Brasil Representações / VN Soluções</li>
+                                <li><span>Stack: </span> WordPress · CSS3 · JavaScript</li>
+                                <li><span>Services: </span> Web Development · UI Design</li>
+                            </ul>
+                            <ul class="list-gap">
+                                <li><span>Start: </span> 10 Apr 2025</li>
+                                <li><span>Delivery: </span> 15 Jul 2025</li>
+                                <li><span>Duration: </span> ~3 months</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-button">
+                            <a class="sc-primary-btn" href="https://vnbrasilrepresentacoes.com.br" target="_blank">
+                                View Project <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <div class="case-step">
+                            <div class="case-num">01</div>
+                            <div class="case-label">Problem</div>
+                            <p class="case-desc">Educational materials supplier for public organisations had no digital presence — impossible to reach new municipalities and education secretariats without a professional institutional website.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">02</div>
+                            <div class="case-label">Solution</div>
+                            <p class="case-desc">Multi-section WordPress site with hero, secretary and director testimonials, partner logos, product catalogue, "Why choose us?" feature cards, and an About page with mission, vision and values.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">03</div>
+                            <div class="case-label">Impact</div>
+                            <p class="case-desc">Full digital presence delivered in 3 months — responsive, SEO-ready design aligned to the brand identity, with a content structure that scales as the product catalogue grows.</p>
+                        </div>
+                    </div>
+                    <div class="sc-portfolio-text">
+                        <h3 class="sc-title">Project Description</h3>
+                        <p class="des sc-mb-0">
+                            - Institutional hero with a prominent CTA and a clear value proposition targeted at public sector managers;<br>
+                            - Testimonials section featuring reviews from Education Secretaries, School Principals and Pedagogical Coordinators;<br>
+                            - Partners section with supplier logo grid;<br>
+                            - Product catalogue and dedicated textbook catalogue area;<br>
+                            - "Why choose VN Soluções?" section with differentiator cards (experience, procurement ease, quality guarantee);<br>
+                            - "About us" page with mission, vision, values and an institutional photo;<br>
+                            - Responsive layout with a navy-blue / teal palette aligned to the brand identity;<br>
+                            - Integrated contact form.
+                        </p>
+                    </div>
+                    <div class="sc-working-content">
+                        <div class="sc-working-content-box sc-mb-40">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Target Audience Focus</h5>
+                                        <p class="des">Copywriting and layout directed at municipal education managers and secretaries — institutional language that conveys credibility and simplicity in public procurement processes.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Cohesive Visual Identity</h5>
+                                        <p class="des">Navy-blue palette with teal accents, clean typography and children-in-education imagery — identity aligned to the brand's mission of transforming public education.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Strategic Social Proof</h5>
+                                        <p class="des">Testimonials from an Education Secretary, a School Principal and a Pedagogical Coordinator placed as social proof for decision-makers — the exact buyer profiles of the company's target market.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- portfolio-modal End -->
+
+                <!-- portfolio-modal Start: BE HUMBLE Bot -->
+                <div id="portfolio-wrapper6" class="sc-portfolio-content-area zoom-anim-dialog mfp-hide">
+                    <div class="portfolio-inner-content sc-mb-35 pl-0">
+                        <div class="portfolio-text">
+                            <h4 class="cate-title white-color">BE HUMBLE Bot</h4>
+                            <p class="des sc-mb-0">
+                                A Python Discord bot built to automate the full member onboarding flow on a Discord server.
+                                When a new member joins, the bot assigns a restricted role, sends a DM welcome message,
+                                collects four key pieces of information (nickname, full name, birthday and availability),
+                                reports them to a moderators-only channel, saves data to an XLSX spreadsheet,
+                                then renames the user and grants them full server access — all without admin intervention.
+                            </p>
+                        </div>
+                        <div class="sc-inner-list d-flex align-items-center justify-content-between sc-mb-30">
+                            <ul class="list-gap">
+                                <li><span>Type: </span> Discord Bot · Community Management</li>
+                                <li><span>Stack: </span> Python · discord.py · openpyxl</li>
+                                <li><span>Category: </span> Automation · Bot Development</li>
+                            </ul>
+                            <ul class="list-gap">
+                                <li><span>Year: </span> 2024</li>
+                                <li><span>Commands: </span> /Ping · /Limpar · /Embed · /Registro</li>
+                            </ul>
+                        </div>
+                        <div class="portfolio-button">
+                            <a class="sc-primary-btn" href="https://github.com/JesseChagas/BE-HUMBLE-BOT" target="_blank">
+                                GitHub <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="case-study">
+                        <div class="case-step">
+                            <div class="case-num">01</div>
+                            <div class="case-label">Problem</div>
+                            <p class="case-desc">Onboarding new Discord members manually was slow and error-prone — admins had to collect info, rename users, assign roles and log data one by one for every new arrival.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">02</div>
+                            <div class="case-label">Solution</div>
+                            <p class="case-desc">Python bot that automates the entire pipeline: restricted role on join → DM survey → moderator report → XLSX data logging → user rename and full role grant, with daily birthday checks as a bonus.</p>
+                        </div>
+                        <div class="case-step">
+                            <div class="case-num">03</div>
+                            <div class="case-label">Impact</div>
+                            <p class="case-desc">Zero admin effort per new member — the full onboarding flow runs autonomously; daily birthday messages boost community engagement automatically.</p>
+                        </div>
+                    </div>
+                    <div class="sc-portfolio-text">
+                        <h3 class="sc-title">Project Description</h3>
+                        <p class="des sc-mb-0">
+                            - On member join: assigns a restricted role limiting access to an instructions channel, then sends a DM welcome message;<br>
+                            - DM survey collects 4 fields: Nickname, Full Name, Birthday and Available Hours;<br>
+                            - After survey completion, sends a formatted embed to a moderators-only channel with all collected data;<br>
+                            - Saves nickname and birthday to an XLSX spreadsheet (openpyxl) for persistent storage;<br>
+                            - Renames the user with the provided nickname, removes the restricted role and grants the full-access role — all automatically;<br>
+                            - Daily birthday checker reads the spreadsheet and sends an embed mention in the general channel for any member celebrating that day;<br>
+                            - 4 slash commands: /Ping (latency), /Limpar (bulk delete, mods only), /Embed (custom embed builder), /Registro (manual survey trigger without rename/role change).
+                        </p>
+                    </div>
+                    <div class="sc-working-content">
+                        <div class="sc-working-content-box sc-mb-40">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Automated Onboarding</h5>
+                                        <p class="des">Full pipeline from join event to full server access — restricted role, DM survey, moderator notification, XLSX logging, rename and role upgrade, all without a single admin click.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Birthday System</h5>
+                                        <p class="des">Daily async task reads the XLSX sheet and fires an embed mention in the general channel for every member whose birthday matches the current date.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="sc-content-box">
+                                        <h5 class="title">Slash Commands</h5>
+                                        <p class="des">Four utility commands: latency check, moderator-only bulk message deletion, custom embed builder and a manual registration flow for existing members.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- portfolio-modal End -->
+
                 <!--========== Portfolio Section End ==============-->
+
+                <!--========== Research / Publications Section Start ==============-->
+                <section class="sc-pub-section sc-pt-120 sc-md-pt-80 sc-pb-120 sc-md-pb-80" id="scroll-research">
+                    <div class="container pf-container">
+                        <div class="row">
+                            <div class="col-lg-8 offset-lg-2">
+                                <div class="sc-heading-area text-center sc-mb-70 sc-md-mb-50">
+                                    <span class="sub-title" data-i18n="research.label">Research &amp; Writing ✍️</span>
+                                    <h2 class="title sc-animation1" data-i18n-html="research.title">
+                                        Published <span class="active-color">Work</span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <div class="pub-card" data-sal="slide-up" data-sal-delay="200" data-sal-duration="700">
+                                    <div class="pub-card-inner">
+                                        <div class="pub-meta">
+                                            <span class="pub-venue">WICS 2024 · SBC — Workshop on Intelligence and Computational Systems</span>
+                                            <span class="pub-date">Jul 21, 2024</span>
+                                        </div>
+                                        <h3 class="pub-title">IA burlada: elaboração de prompts maliciosos no ChatGPT e seus impactos para a sociedade</h3>
+                                        <p class="pub-abstract">Investigates the creation of malicious prompts capable of bypassing ChatGPT's safety filters and analyses the societal impacts of such techniques, including misinformation, fraud, and the erosion of AI trust. Published by the Brazilian Computer Society (SBC).</p>
+                                        <p class="pub-authors"><span class="pub-author-label">Authors:</span> João Paiva, <strong>Jessé das Chagas</strong>, Danyllo Albuquerque, Golbery Rodrigues — IFPB</p>
+                                        <div class="pub-footer">
+                                            <div class="pub-tags">
+                                                <span class="pub-tag">AI Safety</span>
+                                                <span class="pub-tag">Prompt Injection</span>
+                                                <span class="pub-tag">LLMs</span>
+                                                <span class="pub-tag">Social Impact</span>
+                                                <span class="pub-tag">Cybersecurity</span>
+                                            </div>
+                                            <a class="pub-link" href="https://sol.sbc.org.br/index.php/wics/article/view/29517" target="_blank" rel="noopener">
+                                                Read Paper <i class="ri-arrow-right-up-line"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--========== Research / Publications Section End ==============-->
 
                 <!--========== Testimonial Section Start ==============
                 <div class="sc-testimonial-section sc-pt-120 sc-md-pt-80">
@@ -1069,20 +1895,20 @@
                             <div class="col-lg-12">
                                 <div class="cta-content-box d-flex align-items-center justify-content-between">
                                     <div class="cta-title">
-                                        <h3 class="title">
+                                        <h3 class="title" data-i18n-html="cta.title">
                                             I'm available for<br />
                                             freelance work
                                         </h3>
                                     </div>
                                     <div class="cta-button d-flex align-items-center">
                                         <div class="primary-btn sc-mr-20">
-                                            <a class="sc-primary-btn" href="https://api.whatsapp.com/send?phone=5583993285838">
-                                                Hire Me <i class="ri-arrow-right-line"></i
+                                            <a class="sc-primary-btn mag-btn" href="https://api.whatsapp.com/send?phone=5583993285838">
+                                                <span data-i18n="cta.hire">Hire Me</span> <i class="ri-arrow-right-line"></i
                                             ></a>
                                         </div>
                                         <div class="transparent-btn">
                                             <a class="sc-transparent-btn" href="tel:+5583993285838">
-                                                <i class="ri-phone-fill"></i> Call me
+                                                <i class="ri-phone-fill"></i> <span data-i18n="cta.call">Call me</span>
                                             </a>
                                         </div>
                                     </div>
@@ -1102,8 +1928,8 @@
                             <div class="col-lg-7" data-sal="slide-left" data-sal-duration="800">
                                 <div class="project-left-content sc-md-mb-50">
                                     <div class="sc-heading-area sec-animation sc-mb-45">
-                                        <span class="sub-title"> Drop Me Line ✍️</span>
-                                        <h2 class="title">
+                                        <span class="sub-title" data-i18n="contact.label"> Drop Me Line ✍️</span>
+                                        <h2 class="title" data-i18n-html="contact.title">
                                             Let’s Start Your Next
                                             <span class="active-color"> Dream Project</span>
                                         </h2>
@@ -1113,11 +1939,11 @@
                                             <i class="ri-mail-line"></i>
                                         </div>
                                         <div class="contact-text">
-                                            <span class="sub-title d-block sc-mb-5"> Email</span>
+                                            <span class="sub-title d-block sc-mb-5" data-i18n="contact.email"> Email</span>
                                             <ul class="list-gap">
                                                 <li>
-                                                    <a class="contact-link" href="mailto:jessechagas2@gmail.com">
-                                                        jessechagas2@gmail.com</a
+                                                    <a class="contact-link" href="mailto:jessechagas2006@gmail.com">
+                                                        jessechagas2006@gmail.com</a
                                                     >
                                                 </li>
                                             </ul>
@@ -1128,7 +1954,7 @@
                                             <i class="ri-phone-line"></i>
                                         </div>
                                         <div class="contact-text">
-                                            <span class="sub-title d-block sc-mb-5"> Phone </span>
+                                            <span class="sub-title d-block sc-mb-5" data-i18n="contact.phone"> Phone</span>
                                             <ul class="list-gap">
                                                 <li>
                                                     <a class="contact-link" href="https://api.whatsapp.com/send?phone=5583993285838">
@@ -1143,7 +1969,7 @@
                                             <i class="ri-map-pin-line"></i>
                                         </div>
                                         <div class="contact-text">
-                                            <span class="sub-title d-block sc-mb-5"> Office Address</span>
+                                            <span class="sub-title d-block sc-mb-5" data-i18n="contact.address"> Office Address</span>
                                             <ul class="list-gap">
                                                 <li>Campina Grande - PB</li>
                                             </ul>
@@ -1153,19 +1979,20 @@
                             </div>
                             <div class="col-lg-5" data-sal="slide-right" data-sal-duration="800">
                                 <div class="project-form-box">
-                                    <h5 class="title">Get In Touch</h5>
+                                    <h5 class="title" data-i18n="contact.form">Get In Touch</h5>
+                                    <form id="contact-form" novalidate>
                                     <div class="project-input sc-mb-20">
-                                        <input type="text" id="name" name="name" placeholder="Name" required="" />
+                                        <input type="text" id="name" name="name" placeholder="Name" data-i18n-ph="form.name" required="" />
                                     </div>
                                     <div class="project-input sc-mb-20">
-                                        <input type="text" id="emailOne" name="email" placeholder="Email" required="" />
+                                        <input type="email" id="emailOne" name="email" placeholder="Email" data-i18n-ph="form.email" required="" />
                                     </div>
                                     <div class="project-input sc-mb-20">
                                         <input
                                             type="text"
                                             id="SubjectTwo"
                                             name="subject"
-                                            placeholder="Subject"
+                                            placeholder="Subject" data-i18n-ph="form.subject"
                                             required=""
                                         />
                                     </div>
@@ -1173,14 +2000,16 @@
                                         <textarea
                                             id="message"
                                             name="message"
-                                            placeholder="Describe your project..."
+                                            placeholder="Describe your project..." data-i18n-ph="form.msg"
                                         ></textarea>
                                     </div>
                                     <div class="submit-form">
-                                        <button type="submit" value="submit">
-                                            Submit Now <i class="ri-arrow-right-line"></i>
+                                        <button type="submit" id="contact-submit">
+                                            <span data-i18n="contact.submit">Submit Now</span> <i class="ri-arrow-right-line"></i>
                                         </button>
                                     </div>
+                                    <div id="contact-status" style="margin-top:14px;font-size:13px;min-height:20px;"></div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -1257,7 +2086,7 @@
                                             <img class="portal" src="assets/images/icon/portal-1.svg" alt="Icon" />
                                         </div>
                                     </div>
-                                    <h2 class="title">Work Together!</h2>
+                                    <h2 class="title">Data Analytics</h2>
                                 </div>
                             </div>
                             <div class="roll-item">
@@ -1279,7 +2108,7 @@
                                             <img class="portal" src="assets/images/icon/portal-1.svg" alt="Icon" />
                                         </div>
                                     </div>
-                                    <h2 class="title">Work Together!</h2>
+                                    <h2 class="title">Bot Development</h2>
                                 </div>
                             </div>
                             <div class="roll-item">
@@ -1307,7 +2136,7 @@
                                     <div class="footer-logo sc-mb-35">
                                         <a href="#"><img src="assets/images/logo.png" alt="Foote Logo" /></a>
                                     </div>
-                                    <span> Follow Me</span>
+                                    <span data-i18n="footer.follow"> Follow Me</span>
                                     <ul class="about-icon list-gap">
                                         <li>
                                             <a href="https://github.com/JesseChagas" target="_blank"><i class="ri-github-line"></i></a>
@@ -1327,14 +2156,14 @@
                                 data-sal-duration="400"
                             >
                                 <div class="footer-widget footer1-col-2 footer-menu-area">
-                                    <h5 class="footer-title white-color">Quick Link</h5>
+                                    <h5 class="footer-title white-color" data-i18n="footer.links">Quick Link</h5>
                                     <div class="row">
                                         <div class="col-6">
                                             <ul class="footer-menu-list list-gap">
-                                                <li><a href="#scroll-about">About Me</a></li>
-                                                <li><a href="#scroll-service">Certifications</a></li>
-                                                <li><a href="#scroll-portfolio">Portfolio</a></li>
-                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="#scroll-about" data-i18n="footer.about">About Me</a></li>
+                                                <li><a href="#scroll-service" data-i18n="footer.certs">Certifications</a></li>
+                                                <li><a href="#scroll-portfolio" data-i18n="footer.portfolio">Portfolio</a></li>
+                                                <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1343,7 +2172,7 @@
                             <div class="copyright-area">
                                 <div class="copyright-text text-center sc-mt-55">
                                     <p class="desc sc-mt-20">
-                                        © Copyright 2024 by <a href="#" target="_blank"> Jessé Chagas</a>
+                                        © Copyright 2026 by <a href="#" target="_blank"> Jessé Chagas</a>
                                     </p>
                                 </div>
                             </div>
@@ -1375,11 +2204,12 @@
             <!-- Canvas Mobile Menu start -->
             <nav class="right_menu_togle mobile-navbar-menu" id="mobile-navbar-menu">
                 <ul class="list-gap sc-mb-20 sc-pl-0">
-                    <li class="menu-item-has-children current-menu-item"><a class="active" href="#scroll-header">Home</a></li>
-                    <li> <a href="#scroll-about">About</a> </li>
-                    <li><a href="#scroll-service">Certifications</a></li>
-                    <li><a href="#scroll-portfolio">Portfolio</a></li>
-                    <li><a href="#scroll-contact">Contact</a></li>
+                    <li class="menu-item-has-children current-menu-item"><a class="active" href="#scroll-header" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#scroll-about" data-i18n="nav.about">About</a></li>
+                    <li><a href="#scroll-service" data-i18n="nav.certs">Certs</a></li>
+                    <li><a href="#scroll-portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="#scroll-research" data-i18n="nav.research">Research</a></li>
+                    <li><a href="#scroll-contact" data-i18n="nav.contact">Contact</a></li>
                 </ul>
             </nav>
             <!-- Canvas Menu end -->
@@ -1450,7 +2280,49 @@
         <script src="assets/js/ScrollSmoother.min.js"></script>
         <!-- Scrolltrigger js -->
         <script src="assets/js/ScrollTrigger.min.js"></script>
+        <!-- EmailJS SDK -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <!-- Main js -->
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/main.js" defer></script>
+
+        <!-- Command Palette -->
+        <div id="cmd-palette" class="cmd-overlay" role="dialog" aria-label="Command palette">
+            <div class="cmd-box">
+                <div class="cmd-search-row">
+                    <i class="ri-search-line cmd-search-icon"></i>
+                    <input id="cmd-input" class="cmd-input" type="text" placeholder="Jump to a section or link..." autocomplete="off" spellcheck="false" />
+                    <kbd class="cmd-esc-hint">ESC to close</kbd>
+                </div>
+                <div class="cmd-results" id="cmd-results"></div>
+                <div class="cmd-footer">
+                    <span class="cmd-hint"><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+                    <span class="cmd-hint"><kbd>↵</kbd> go</span>
+                    <span class="cmd-hint"><kbd>Esc</kbd> close</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Terminal Easter Egg -->
+        <button class="term-trigger" id="term-trigger" title="Open terminal" aria-label="Open terminal">&gt;_</button>
+        <div class="term-overlay" id="term-overlay">
+            <div class="term-box" role="dialog" aria-label="Interactive terminal">
+                <div class="term-bar">
+                    <span class="term-dot red" id="term-close" title="Close"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                    <span class="term-bar-title">jesse@portfolio ~ $</span>
+                </div>
+                <div class="term-body" id="term-body">
+                    <div>Welcome to <span class="term-line-hi">Jessé's Portfolio Terminal</span> v1.0</div>
+                    <div>Type <span class="term-line-cmd">help</span> to see available commands.</div>
+                    <div>&nbsp;</div>
+                </div>
+                <div class="term-input-row">
+                    <span class="term-prompt">jesse@portfolio:~$&nbsp;</span>
+                    <input class="term-input" id="term-input" type="text" autocomplete="off" autocorrect="off" spellcheck="false" autofocus placeholder="type a command..." aria-label="Terminal input" />
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
