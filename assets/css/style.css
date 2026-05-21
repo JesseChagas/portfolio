@@ -2240,6 +2240,24 @@ main {
   display: flex;
 }
 
+/* ── keyframes da barra de rolagem horizontal (removidos por engano na redução) ── */
+@-webkit-keyframes slide-har {
+  0%   { -webkit-transform: translateX(0px);    transform: translateX(0px);    }
+  100% { -webkit-transform: translateX(-100%);  transform: translateX(-100%);  }
+}
+@keyframes slide-har {
+  0%   { -webkit-transform: translateX(0px);    transform: translateX(0px);    }
+  100% { -webkit-transform: translateX(-100%);  transform: translateX(-100%);  }
+}
+@-webkit-keyframes slide-har-revers {
+  0%   { -webkit-transform: translateX(-100%);  transform: translateX(-100%);  }
+  100% { -webkit-transform: translateX(0px);    transform: translateX(0px);    }
+}
+@keyframes slide-har-revers {
+  0%   { -webkit-transform: translateX(-100%);  transform: translateX(-100%);  }
+  100% { -webkit-transform: translateX(0px);    transform: translateX(0px);    }
+}
+
 .sc-roll-section-two {
   background-color: #262626;
 }
